@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Navbar from '@/components/Navbar';
+import NavBar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection';
 import Specials from '@/components/Specials';
 import Testimonials from '@/components/Testimonials'
@@ -14,8 +14,7 @@ export default function Home() {
         <meta name="description" content="Welcome to Little Lemon Restaurant" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Navbar />
+      <NavBar />
       <HeroSection />
       <Specials />
       <Testimonials />
