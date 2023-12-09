@@ -1,28 +1,59 @@
-export default function Testimonials() {
-    return (
-      <div className="bg-primary-light py-8 opacity-60">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-8">Testimonials</h2>
-          {/* Placeholder for testimonials cards */}
-          <div className="flex flex-wrap justify-center">
-            {/* Repeat this for each testimonial */}
-            <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
-              <div className="bg-white shadow-lg rounded-lg p-6">
-                <p className="text-gray-600">"Great experience... Loved the food!"</p>
-                {/* Placeholder for user profile image */}
-                <div className="flex items-center mt-4">
-                  <div className="rounded-full h-12 w-12 overflow-hidden">
-                    <img src="/path-to-your-placeholder-image.jpg" alt="Profile"/>
-                  </div>
-                  <div className="ml-4">
-                    <p className="text-sm font-semibold">John Doe</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
+
+const testimonials = [
+  {
+    imageUrl: "/img/customers/woman1.jpg",
+    name: "Isabella Johnson",
+    headline: "Absolutely loved it!",
+    testimonial: "The ambiance and the food were both top-notch. Can't wait to come back!"
+  },
+  {
+    imageUrl: "/img/customers/man1.jpg",
+    name: "Oliver Smith",
+    headline: "A delightful experience",
+    testimonial: "Every bite was a joy, and the service was impeccable. Highly recommended!"
+  },
+  {
+    imageUrl: "/img/customers/woman2.jpg",
+    name: "Emma Stone",
+    headline: "Best dinner in town",
+    testimonial: "Little Lemon has become my go-to spot for dining out. The flavors are incredible."
+  },
+  {
+    imageUrl: "/img/customers/man3.jpg",
+    name: "Rohan Kumar",
+    headline: "A gastronomic delight",
+    testimonial: "From appetizers to desserts, every dish is prepared to perfection. A must-visit!"
   }
-  
+];
+
+function TestimonialCard ({ imageUrl, name, headline, testimonial }) {
+  return (
+    <div className="max-w-md bg-primary-dark rounded-lg border border-gray-200 shadow-md">
+      <div className="flex flex-col items-center p-5">
+        <img className="mb-3 w-[10rem] h-[10rem] rounded-full shadow-lg" src={imageUrl} alt="Customer portrait" />
+        <h5 className="mb-1 text-xl font-medium text-secondary-peach">{headline}</h5>
+        <span className="text-sm text-primary-light">{name}</span>
+        <p className="text-secondary-blush mt-4 text-center">{testimonial}</p>
+      </div>
+    </div>
+  );
+};
+
+export default function Testimonials () {
+
+  return (
+    <div className="mx-auto my-14 px-14 py-14 bg-primary-light">
+      <div className="flex flex-row justify-center items-center gap-12">
+        {testimonials.map((testimonial, index) => (
+          <TestimonialCard
+            key={index}
+            imageUrl={testimonial.imageUrl}
+            name={testimonial.name}
+            headline={testimonial.headline}
+            testimonial={testimonial.testimonial}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
