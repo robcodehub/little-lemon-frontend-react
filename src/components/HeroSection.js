@@ -18,7 +18,7 @@ export default function HeroSection() {
         <div className="items-center flex flex-wrap">
           <div className="w-full lg:w-8/12 px-4 ml-auto mr-auto text-center">
             <div className="pr-12">
-              <img src="/img/logo.png" alt="logo" className="mx-auto mb-6" /> {/* Make sure the logo path is correct */}
+              {/* <img src="/img/logo.svg" alt="logo" className="mx-auto mb-6 w-80" />  */}
               <h1 className="text-white font-semibold text-5xl">
                 Little Lemon
               </h1>
