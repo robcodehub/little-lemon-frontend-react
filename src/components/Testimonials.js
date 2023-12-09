@@ -1,6 +1,6 @@
 export default function Testimonials() {
     return (
-      <div className="bg-gray-100 py-8">
+      <div className="bg-primary-light py-8 opacity-60">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-8">Testimonials</h2>
           {/* Placeholder for testimonials cards */}
