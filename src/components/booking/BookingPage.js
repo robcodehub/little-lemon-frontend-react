@@ -1,7 +1,7 @@
 import BookingForm from "./BookingForm";
 
 export default function BookingPage() {
-    return(
+    return (
         <div>
             <BookingForm />
         </div>

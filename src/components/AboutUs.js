@@ -1,4 +1,4 @@
-export default function About() {
+export default function AboutUs() {
   return (
     <div className="container mx-auto px-6 py-8">
       <div className="flex flex-row justify-between items-center">

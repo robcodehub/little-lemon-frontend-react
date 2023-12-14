@@ -1,13 +1,17 @@
-import Link from 'next/link';
+import HeroSection from '@/components/HeroSection';
+import Specials from '@/components/Specials';
+import Testimonials from '@/components/Testimonials'
+import AboutUs from '@/components/AboutUs';
 
-function OrderOnline () {
+import {PageLayout} from '@/app/page';
+
+export default function OrderOnline() {
   return (
-    <div>
-      <h1>Order Online</h1>
-      <p>Welcome to our online ordering page.</p>
-      <Link href="/">Back to home</Link>
-    </div>
+    <PageLayout>
+      <HeroSection />
+      <Specials />
+      <Testimonials />
+      <AboutUs />
+    </PageLayout>
   );
-};
-
-export default OrderOnline;
+}

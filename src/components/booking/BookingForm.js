@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function BookingForm(){
+export default function BookingForm() {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(1);
@@ -14,21 +14,21 @@ export default function BookingForm(){
   };
 
   return (
-    <form 
+    <form
       onSubmit={handleSubmit}
       className="grid max-w-xs gap-5"
     >
       <label htmlFor="res-date" className="text-gray-700">Choose date</label>
-      <input 
-        type="date" 
-        id="res-date" 
+      <input
+        type="date"
+        id="res-date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
         className="border-2 rounded p-2"
       />
 
       <label htmlFor="res-time" className="text-gray-700">Choose time</label>
-      <select 
+      <select
         id="res-time"
         value={time}
         onChange={(e) => setTime(e.target.value)}
@@ -40,11 +40,11 @@ export default function BookingForm(){
       </select>
 
       <label htmlFor="guests" className="text-gray-700">Number of guests</label>
-      <input 
-        type="number" 
-        placeholder="1" 
-        min="1" 
-        max="10" 
+      <input
+        type="number"
+        placeholder="1"
+        min="1"
+        max="10"
         id="guests"
         value={guests}
         onChange={(e) => setGuests(e.target.value)}
@@ -52,7 +52,7 @@ export default function BookingForm(){
       />
 
       <label htmlFor="occasion" className="text-gray-700">Occasion</label>
-      <select 
+      <select
         id="occasion"
         value={occasion}
         onChange={(e) => setOccasion(e.target.value)}
@@ -63,9 +63,9 @@ export default function BookingForm(){
         <option value="Anniversary">Anniversary</option>
       </select>
 
-      <input 
-        type="submit" 
-        value="Make Your Reservation" 
+      <input
+        type="submit"
+        value="Make Your Reservation"
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
       />
     </form>

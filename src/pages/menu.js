@@ -1,13 +1,17 @@
-import Link from 'next/link';
+import HeroSection from '@/components/HeroSection';
+import Specials from '@/components/Specials';
+import Testimonials from '@/components/Testimonials'
+import AboutUs from '@/components/AboutUs';
+
+import {PageLayout} from '@/app/page';
 
 export default function Menu() {
-    return (
-        <div>
-            {/* Content of your reservations page goes here */}
-            <h1>Menu</h1>
-            <h2>Under Contruction....</h2>
-            {/* Include a form or reservation widget if necessary */}
-            <Link href="/">Back to home</Link>
-        </div>
-    );
-};
+  return (
+    <PageLayout>
+      <HeroSection />
+      <Specials />
+      <Testimonials />
+      <AboutUs />
+    </PageLayout>
+  );
+}
