@@ -1,6 +1,6 @@
 export default function AboutUs() {
   return (
-    <div className="container mx-auto px-6 py-8">
+    <div id="about" className="container mx-auto px-6 py-8">
       <div className="flex flex-row justify-between items-center">
 
         <div className="w-full md:w-1/2 h-full">

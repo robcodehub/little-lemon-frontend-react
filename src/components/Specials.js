@@ -19,7 +19,7 @@ const specialDishes = [{
 
 export default function Specials() {
     return (
-      <div className="container mx-auto px-6 py-8">
+      <div id="menu" className="container mx-auto px-6 py-8">
         <h2 className="text-3xl font-bold text-center mb-8">Specials</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {specialDishes.map((dish) => (<Dish key={dish.imageUrl} imageUrl={dish.imageUrl} dishName={dish.dishName} description={dish.description}/>))}

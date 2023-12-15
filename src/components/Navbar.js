@@ -8,9 +8,9 @@ export default function NavBar() {
         <img src="/img/logo.svg" alt="logo" className="mx-auto w-44 my-1" /> 
         </Link>
         <div className="hidden md:flex items-center space-x-10 text-xl text-primary-light font-semibold z-20 tracking-wider">
-          <Link href="/" className="hover:text-secondary-peach">Home</Link>
-          <Link href="/about" className="hover:text-secondary-peach">About</Link>
-          <Link href="/menu" className="hover:text-secondary-peach">Menu</Link>
+          <a href="/" className="hover:text-secondary-peach">Home</a> 
+          <a href="#about" className="hover:text-secondary-peach">About</a>
+          <a href="#menu" className="hover:text-secondary-peach">Menu</a>
           <Link href="/reservations" className="hover:text-secondary-peach">Reservations</Link>
           <Link href="/order-online" className="hover:text-secondary-peach">Order Online</Link>
           <Link href="/login" className="hover:text-secondary-peach">Login</Link>
