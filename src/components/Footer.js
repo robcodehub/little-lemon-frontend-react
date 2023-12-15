@@ -14,8 +14,8 @@ const Footer = () => {
         <div className="flex flex-col items-start">
           <h4 className="font-bold mb-2 text-gray-800">Navigation</h4>
           <Link href="/" className="text-gray-800 hover:text-yellow-600">Home</Link>
-          <Link href="/about" className="text-gray-800 hover:text-yellow-600">About</Link>
-          <Link href="/menu" className="text-gray-800 hover:text-yellow-600">Menu</Link>
+          <a href="#about" className="text-gray-800 hover:text-yellow-600">About</a>
+          <a href="#menu" className="text-gray-800 hover:text-yellow-600">Menu</a>
           <Link href="/reservations" className="text-gray-800 hover:text-yellow-600">Reservations</Link>
           <Link href="/order-online" className="text-gray-800 hover:text-yellow-600">Order Online</Link>
           <Link href="/login" className="text-gray-800 hover:text-yellow-600">Login</Link>
@@ -40,7 +40,7 @@ const Footer = () => {
       </div>
       <div className="text-center mt-8">
         <p className="text-gray-800 text-sm">© 2023 Little Lemon. All rights reserved.</p>
-        <Link href="/privacy" className="text-gray-800 hover:text-yellow-600">Privacy Policy</Link>
+        <Link href="/" className="text-gray-800 hover:text-yellow-600">Privacy Policy</Link>
       </div>
     </footer>
   );

@@ -1,6 +1,6 @@
 export default function AboutUs() {
   return (
-    <div id="about" className="container mx-auto px-6 py-8">
+    <div id="about" className="container mx-auto px-6 pb-14">
       <div className="flex flex-row justify-between items-center">
 
         <div className="w-full md:w-1/2 h-full">
@@ -16,9 +16,7 @@ export default function AboutUs() {
           <div className="w-3/4">
             <img src="/img/atmosphere.jpg" alt="Top Right Image" className="rounded-full"/>
           </div>
-      
         </div>
-
       </div>
     </div>
   );

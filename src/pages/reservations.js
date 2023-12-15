@@ -10,9 +10,6 @@ export default function Reservations() {
   return (
     <PageLayout>
       <HeroSection />
-      <Specials />
-      <Testimonials />
-      <AboutUs />
       <BookingPage />
     </PageLayout>
   );
