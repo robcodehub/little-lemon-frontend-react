@@ -2,9 +2,9 @@ import BookingForm from "./BookingForm";
 
 export default function BookingPage() {
     return (
-      <div className="relative pt-16 pb-32 flex content-center items-center justify-center"
+      <div className="relative pt-20 mt-10 pb-32 flex content-center items-center justify-center"
            style={{
-             minHeight: '75vh',
+             minHeight: '60vh',
              backgroundImage: `url('/img/herobanner.jpg')`, // Note the change here
              backgroundSize: 'cover',
              backgroundPosition: 'center center',
