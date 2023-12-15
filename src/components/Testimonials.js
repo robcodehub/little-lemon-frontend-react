@@ -39,12 +39,11 @@ function TestimonialCard ({ imageUrl, name, headline, testimonial }) {
   );
 };
 
-export default function Testimonials () {
-
+export default function Testimonials() {
   return (
-    <div className="mx-auto my-14 px-14 pt-10 pb-16 bg-primary-light">
-      <h2 className="text-3xl text-primary-dark font-bold text-center mb-8">Testimonials</h2>
-      <div className="flex flex-row justify-center items-center gap-12">
+    <div className="mx-auto my-8 px-5 sm:px-14 pt-10 pb-16 bg-primary-light">
+      <h2 className="text-2xl sm:text-3xl text-primary-dark font-bold text-center mb-6 sm:mb-8">Testimonials</h2>
+      <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-12">
         {testimonials.map((testimonial, index) => (
           <TestimonialCard
             key={index}
@@ -57,4 +56,4 @@ export default function Testimonials () {
       </div>
     </div>
   );
-};
+}
