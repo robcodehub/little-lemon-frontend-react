@@ -1,6 +1,9 @@
 
 # Little Lemon React Frontend Capstone Project
 
+# View the live website here: 
+# https://little-lemon-frontend-react.vercel.app/
+
 ### Video of Website Features
 
 The below video shows a walkthrough of the website and it's features. </br>
