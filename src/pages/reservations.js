@@ -9,7 +9,6 @@ import {PageLayout} from '@/app/page';
 export default function Reservations() {
   return (
     <PageLayout>
-      <HeroSection />
       <BookingPage />
     </PageLayout>
   );
