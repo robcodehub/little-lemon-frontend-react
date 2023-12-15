@@ -5,19 +5,29 @@ export default function BookingForm() {
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('');
-  const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]);
+  const [formErrors, setFormErrors] = useState({});
+  const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+
+  const validateForm = () => {
+    const errors = {};
+    if (!date) errors.date = 'Date is required';
+    if (!time) errors.time = 'Time is required';
+    if (guests < 1 || guests > 10) errors.guests = 'Guests must be between 1 and 10';
+
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Logic to handle form submission will go here
-    console.log({ date, time, guests, occasion });
+    if (validateForm()) {
+      console.log({ date, time, guests, occasion });
+      // form submission logic here
+    }
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="grid max-w-xs gap-5"
-    >
+    <form onSubmit={handleSubmit} className="grid max-w-xs gap-5">
       <label htmlFor="res-date" className="text-gray-700">Choose date</label>
       <input
         type="date"
@@ -26,6 +36,7 @@ export default function BookingForm() {
         onChange={(e) => setDate(e.target.value)}
         className="border-2 rounded p-2"
       />
+      {formErrors.date && <p className="text-red-500">{formErrors.date}</p>}
 
       <label htmlFor="res-time" className="text-gray-700">Choose time</label>
       <select
@@ -38,6 +49,7 @@ export default function BookingForm() {
           <option key={index} value={availableTime}>{availableTime}</option>
         ))}
       </select>
+      {formErrors.time && <p className="text-red-500">{formErrors.time}</p>}
 
       <label htmlFor="guests" className="text-gray-700">Number of guests</label>
       <input
@@ -50,6 +62,7 @@ export default function BookingForm() {
         onChange={(e) => setGuests(e.target.value)}
         className="border-2 rounded p-2"
       />
+      {formErrors.guests && <p className="text-red-500">{formErrors.guests}</p>}
 
       <label htmlFor="occasion" className="text-gray-700">Occasion</label>
       <select
@@ -70,4 +83,4 @@ export default function BookingForm() {
       />
     </form>
   );
-};
+}
